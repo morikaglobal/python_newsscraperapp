@@ -1,0 +1,35 @@
+.container {
+    background-color: rgb(247, 247, 247);
+}
+
+.page-top {
+    text-align: center;
+}
+
+.page-top h6{
+    margin-bottom: 40px;
+}
+
+span {
+    display: inline-block;
+    margin-right: 0.2rem;
+}
+
+h4 {
+    margin-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.news_list {
+    background-color: lightblue;
+}
+
+.card-title {
+    display: block;
+    
+}
+
+.card-title span{
+    color:blue;
+}

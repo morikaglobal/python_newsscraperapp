@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News Scraper App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div class="container p-3 my-3">
+        <div class="page-top px-4">
+            <h3>NEWS SCRAPER APP</h3>
+            <h6>What does this app do and how this is built</h6>
+
+            <p><span>I wanted to build a simple app on the web using <strong>Python</strong>to scrape</span><span>the latest news from a specific news site using various Python libraries.</span>
+            <br><br>
+            <span>Every time I reload this page this app will scrape 5 news articles</span><span>on the top of the page of the live site of <a href="https://elpais.com/elpais/inenglish.html" target="_blank">El Paris</a> using
+            <strong>Beautiful Soup</strong>,</span><span>then the scraped data will be filtered, cleaned and displayed</span><span>in the list below on this site using <strong>Flask</strong> and deployed using <strong>heroku</strong>.</span>
+            <br><br>
+            Please visit my <a href="https://www.morikaglobal.com" target="_blank">Portfolio site</a> or <a
+            href="https://github.com/morikaglobal/python_newsscraperapp" target="_blank">my github </a> for the code of this app.</p>
+        </div>
+        
+        <div class="container news_list px-5 pb-2">
+            <h4>Latest 5 top news from El Paris</h4>
+
+            {% for data_list in news_array %}
+
+            <div class="card mt-3">
+                <h5 class="card-header">{{ data_list["title"] }}</h5>
+                <div class="card-body">
+                    <h7 class="card-title"><strong>CATEGORY: <span>{{ data_list["category"] }}</span></strong></h7>
+                    <a href="{{ data_list['link'] }}" target="_blank" class="btn btn-primary">Read the news</a>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+
+</html>
