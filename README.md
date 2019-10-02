@@ -2,7 +2,7 @@
 
 News Scraper App using Python and Beautiful Soup and Flask to scrape the latest news articles from a live news site
 
-<a href="https://pythonnewsscraper.herokuapp.com/">View Demo</a>
+<a href="https://pythonnewsscraper.herokuapp.com/" target="_blank">View Demo</a>
 
 ## About the Project
 
