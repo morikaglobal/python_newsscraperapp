@@ -14,7 +14,7 @@ Built with:
 
 - Python
 - Beautiful Soup
-- Flask with ninja
+- Flask with Jinja template
 
 ## Getting Started
 
@@ -39,7 +39,7 @@ the code above returns the raw data of all the news articles that is currently d
 
 From the data above, I cleaned the data and extracted the title and the link of each articles currently displayed, then I did the same for different section of the web to scrape the news category of each news article.
 
-Then using Flask and ninja, I extract the data of the latest top 5 news articles and get them displayed on my news scraper app.
+Then using Flask and Jinja templates, I extract the data of the latest top 5 news articles and get them displayed on my news scraper app.
 
 
 
