@@ -41,5 +41,23 @@ From the data above, I cleaned the data and extracted the title and the link of 
 
 Then using Flask and Jinja templates, I extract the data of the latest top 5 news articles and get them displayed on my news scraper app.
 
+## Updates in April 2020
+
+I noticed that my app was no longer scraping the news data in April 2020,
+as the website my app was scraping had changes in its landing page HTML.
+
+I made the updates to my code as below so that my app can scrape the news data as before, and my app no longer displays category title for the article as the original news website no longer displays category for every news article.
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+r1 = requests.get("https://elpais.com/elpais/inenglish.html")
+coverpage = r1.content
+
+soup1 = BeautifulSoup(coverpage, 'html5lib')
+
+coverpage_news = soup1.find_all('h2', class_='headline')
+```
 
 
