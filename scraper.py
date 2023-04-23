@@ -9,19 +9,26 @@ def show_news():
     news_array = []
 
     r1 = requests.get("https://elpais.com/elpais/inenglish.html")
+    print('requested')
     coverpage = r1.content
+    print('TYPE', type(coverpage))
     soup1 = BeautifulSoup(coverpage, 'html.parser')
+    #new
+    coverpage_news = soup1.find_all('h2', class_='c_t')
 
-    coverpage_news = soup1.find_all('h2', class_='headline')
+    # old
+    # coverpage_news = soup1.find_all('h2', class_='headline')
     # news_byline = soup1.find_all('a', class_='author')
+    print(len(coverpage_news))
 
     for (a, b) in zip(coverpage_news,coverpage_news):
         
         data_list = {}
 
         data_list["title"] = a.text #.replace("\n","")
-        url = "https://english.elpais.com"
-        data_list["link"] = url + b.a["href"]
+        # url = "https://english.elpais.com"
+        data_list["link"] = b.a["href"]
+        print(data_list["link"])
         # test = "ABC"
         # data_list["byline"] = test + c.text
             
