@@ -10,7 +10,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 python-dotenv==0.10.3
-requests==2.22.0
+requests==2.31.0
 soupsieve==1.9.4
 urllib3==1.25.11
 Werkzeug==2.0.3
