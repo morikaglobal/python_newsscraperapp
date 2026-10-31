@@ -11,6 +11,6 @@ Jinja2==2.11.3
 MarkupSafe==1.1.1
 python-dotenv==0.10.3
 requests==2.22.0
-soupsieve==1.9.4
+soupsieve==2.9
 urllib3==2.8.0
 Werkzeug==2.0.3
