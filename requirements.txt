@@ -13,4 +13,4 @@ python-dotenv==1.2.2
 requests==2.22.0
 soupsieve==2.9
 urllib3==2.8.0
-Werkzeug==2.0.3
+Werkzeug==3.1.9
